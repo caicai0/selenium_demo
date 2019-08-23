@@ -35,10 +35,21 @@ shenhe_tile.click()
 
 # 扫描元素
 while True :
+    # 通过
+    # if isElementExist(browser,'.breadcrumb > shiro\:haspermission:nth-child(1) > button:nth-child(1)') :
+    #     tong = browser.find_element_by_css_selector('.breadcrumb > shiro\:haspermission:nth-child(1) > button:nth-child(1)')
+    #     if tong.is_displayed() :
+    #         tong.click()
+
+    # 忽略
+    if isElementExist(browser,'.breadcrumb > shiro\:haspermission:nth-child(1) > button:nth-child(2)') :
+        nextBtn = browser.find_element_by_css_selector('.breadcrumb > shiro\:haspermission:nth-child(1) > button:nth-child(2)')
+        if nextBtn.is_displayed():
+            nextBtn.click()
+
     if isElementExist(browser,'#nextshow > div:nth-child(3) > a:nth-child(1)') :
         nextBtn = browser.find_element_by_css_selector('#nextshow > div:nth-child(3) > a:nth-child(1)')
         if nextBtn.is_displayed():
             nextBtn.click()
-    else:
-        print('meiyou')
+
 

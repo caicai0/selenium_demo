@@ -19,9 +19,9 @@ browser = webdriver.Firefox()
 browser.get('http://www.cn-healthcare.com/freezing/')
 time.sleep(2)
 name = browser.find_element_by_css_selector("input.placeholder-no-fix")
-name.send_keys('liyufeng')
+name.send_keys('admin')
 password = browser.find_element_by_name("password")
-password.send_keys('w258li')
+password.send_keys('ZgjkjCn2016')
 submit = browser.find_element_by_css_selector('button.btn.green.pull-right')
 submit.click()
 time.sleep(1.5)
@@ -36,16 +36,16 @@ shenhe_tile.click()
 # 扫描元素
 while True :
     # 通过
-    # if isElementExist(browser,'.breadcrumb > shiro\:haspermission:nth-child(1) > button:nth-child(1)') :
-    #     tong = browser.find_element_by_css_selector('.breadcrumb > shiro\:haspermission:nth-child(1) > button:nth-child(1)')
-    #     if tong.is_displayed() :
-    #         tong.click()
+    if isElementExist(browser,'.breadcrumb > shiro\:haspermission:nth-child(1) > button:nth-child(1)') :
+        tong = browser.find_element_by_css_selector('.breadcrumb > shiro\:haspermission:nth-child(1) > button:nth-child(1)')
+        if tong.is_displayed() :
+            tong.click()
 
     # 忽略
-    if isElementExist(browser,'.breadcrumb > shiro\:haspermission:nth-child(1) > button:nth-child(2)') :
-        nextBtn = browser.find_element_by_css_selector('.breadcrumb > shiro\:haspermission:nth-child(1) > button:nth-child(2)')
-        if nextBtn.is_displayed():
-            nextBtn.click()
+    # if isElementExist(browser,'.breadcrumb > shiro\:haspermission:nth-child(1) > button:nth-child(2)') :
+    #     nextBtn = browser.find_element_by_css_selector('.breadcrumb > shiro\:haspermission:nth-child(1) > button:nth-child(2)')
+    #     if nextBtn.is_displayed():
+    #         nextBtn.click()
 
     if isElementExist(browser,'#nextshow > div:nth-child(3) > a:nth-child(1)') :
         nextBtn = browser.find_element_by_css_selector('#nextshow > div:nth-child(3) > a:nth-child(1)')
